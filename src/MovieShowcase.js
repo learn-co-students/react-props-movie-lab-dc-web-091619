@@ -7,11 +7,13 @@ export default class MovieShowcase extends Component {
   generateMovieCards = () => {
     // return movieData.map(movie=><MovieCard content={movie} />)
     return (
-      movieData.map(movie=> <MovieCard 
+      movieData.map((movie, index)=> <MovieCard 
         title= {movie.title}
         IMDBRating = {movie.IMDBRating}
         genres = {movie.genres}
         poster = {movie.poster}
+        key = {index} 
+        // not sure why...other than console error...don't even use it in the rest of the components...
       />)
     )
   }
